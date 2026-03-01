@@ -1,0 +1,47 @@
+public class Cylinder extends Circle { // Save as "Cylinder.java"
+    private double height; // private variable
+
+    // Constructor with default color, radius and height
+    public Cylinder() {
+        super(); // call superclass no-arg constructor Circle()
+        this.height = 1.0;
+    }
+
+    // Constructor with default radius, color but given height
+    public Cylinder(double height) {
+        super(); // call superclass no-arg constructor Circle()
+        this.height = height;
+    }
+
+    // Constructor with default color, but given radius, height
+    public Cylinder(double radius, double height) {
+        super(radius); // call superclass constructor Circle(radius)
+        this.height = height;
+    }
+
+    // A public method for retrieving the height
+    public double getHeight() {
+        return height;
+    }
+
+    //override getArea untuk menghitung luas permukaan tabung
+    @Override
+    public double getArea(){
+        double r = getRadius();
+        return 2 * Math.PI * r * height + 2 * super.getArea();
+    }
+
+    //diperbaiki supaya rumus volume tetap pakai luas alas lingkaran
+    // A public method for computing the volume of cylinder
+    // use superclass method getArea() to get the base area
+    public double getVolume() {
+        return super.getArea() * height;
+    }
+
+    //override toString untuk menampilkan keterangan Cylinder
+    @Override
+    public String toString(){
+        return "Cylinder: subclass of " + super.toString() + " height = " + height;
+    }
+}
+
