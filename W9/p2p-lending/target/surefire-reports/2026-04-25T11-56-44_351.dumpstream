@@ -1,0 +1,5 @@
+# Created at 2026-04-25T11:56:44.718
+Boot Manifest-JAR contains absolute paths in classpath 'D:\jtk\sem 2\Teknik Pemrograman\praktek\W9_PR\p2p-lending\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
